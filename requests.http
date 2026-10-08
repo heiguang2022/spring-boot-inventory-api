@@ -1,0 +1,27 @@
+### Create a product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "sku": "TSH_001",
+  "name": "Classic T-Shirt",
+  "price": 19.99,
+  "quantity": 25
+}
+
+### List products
+GET http://localhost:8080/api/products
+
+### Get one product
+GET http://localhost:8080/api/products/1
+
+### Update inventory
+PATCH http://localhost:8080/api/products/1/inventory
+Content-Type: application/json
+
+{
+  "quantity": 42
+}
+
+### Delete a product
+DELETE http://localhost:8080/api/products/1

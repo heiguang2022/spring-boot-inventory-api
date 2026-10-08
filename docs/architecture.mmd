@@ -1,0 +1,9 @@
+flowchart LR
+    C[API Client] --> W[Spring MVC Controller]
+    W --> V[Bean Validation]
+    V --> S[Product Service]
+    S --> R[Spring Data JPA]
+    R --> DB[(H2 or MySQL)]
+    S --> E[Structured Error Handling]
+    O[Swagger UI] --> W
+    T[JUnit + MockMvc] --> W
